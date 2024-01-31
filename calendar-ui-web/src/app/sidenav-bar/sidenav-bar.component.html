@@ -1,0 +1,34 @@
+<div class="sticky-top">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <img [src]="profileUrl" alt="profile" class="mt-3 rounded-circle responsive-image" />
+    <p class="my-2 p-2 responsive-text">Hello, {{ userName }}</p>
+  </div>
+
+  <div class="nav-item my-4">
+    <ul class="my-2 py-2 text-white">
+      <li class="my-2 py-2" [class.selected]="selectedItem === 'calendar'" (click)="selectItem('calendar')">
+        <i class="fa fa-calendar mx-3"></i>Events
+      </li>
+      <li class="my-2 py-2" [class.selected]="selectedItem === 'category'" (click)="selectItem('category')">
+        <i class="fa fa-tag mx-3"></i>Category
+      </li>
+      <li class="my-2 py-2" [class.selected]="selectedItem === 'group'" (click)="selectItem('group')">
+        <i class="fa fa-users mx-3"></i>Group
+      </li>
+      <li class="my-2 py-2" [class.selected]="selectedItem === 'profile'" (click)="selectItem('profile')">
+        <i class="fa fa-id-badge mx-3"></i>Account
+      </li>
+      <li class="my-2 py-2 " [class.selected]="selectedItem === 'contactus'" (click)="selectItem('contactus')">
+        <i class="fa fa-envelope mx-3"></i>Contact Us
+      </li>
+      <li class="my-2 py-2 " [class.selected]="selectedItem === 'logout'" (click)="selectItem('logout')">
+        <i class="fa fa-sign-out mx-3"></i>Logout
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <img src="https://bbdsoftware.com/wp-content/uploads/logo.svg" alt="logo" class="mt-3 responsive-image" />
+  </div>
+</div>

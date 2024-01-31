@@ -1,0 +1,29 @@
+.container {
+    background-color: var(--modal-background);
+    width: 70%;
+    border-radius: 10px; /* Add this line for border radius */
+  }
+
+label{
+  color: white;
+  font-weight: bold;
+}
+
+input:focus{
+    outline: none;
+}
+
+.btn {
+  color: white;
+  border-radius: var(--border-radius);
+  height: var(--height);
+  width: var(--width);
+}
+
+.h4{
+  font-weight: bold;
+}
+
+.rounded-corners {
+  border-radius: 30px;
+}

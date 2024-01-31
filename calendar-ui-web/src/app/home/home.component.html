@@ -1,0 +1,140 @@
+<ng-container *ngIf="isUserExist; else elseTemplate">
+  <app-navbar features="features" aboutus="aboutus"></app-navbar>
+  <section class="p-5" style="background-color: #f6f8f9">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-12 col-xxl-5">
+          <h1 class="heading">
+            Schedule your Day<br /><span class="headingText">with Us!</span>
+          </h1>
+          <p>Stay Organized and Connected: Simplify Events and Meetings with our Calendar.</p>
+          <a class="btn btn-success  text-white mb-3" href="login">Let's Start</a>
+        </div>
+        <div class="col-lg-5 col-md-5 col-12 col-xxl-5">
+          <img src="/assets/home.png" alt="" class="img-fluid home_img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-2" id="features">
+    <div class="text-center">
+      <h2>Start your Journey</h2>
+      <span>with just 3 steps</span>
+      <hr class="horizontal" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-12 col-xxl-5">
+          <img src="/assets/icons/section.svg" alt="" class="img-fluid" />
+        </div>
+        <div class="my-3 col-lg-5 col-md-5 col-12 col-xxl-5">
+          <h4 class="m-3 section-heading">You are just 3 steps away from us</h4>
+          <div class="creation-steps m-3">
+            <div class="d-block mb-2">
+              <h5>
+                <img src="/assets/icons/user.png" class="m-2 img-icon" />Create
+                Account
+              </h5>
+              <p class="m-2">
+                One-click sign up with your Google Account and you're good to go.
+              </p>
+            </div>
+            <div class="d-block mb-2">
+              <h5>
+                <img src="/assets/icons/manage.png" class="m-2 img-icon" />Manage Events
+              </h5>
+              <p class="m-2">
+                Effortlessly manage and coordinate your events and meetings using our scheduling platform.
+              </p>
+            </div>
+            <div class="d-block mb-2">
+              <h5>
+                <img src="/assets/icons/notify.png" class="m-2 img-icon" />Get
+                Notified
+              </h5>
+              <p class="m-2">
+                Stay connected and never miss a beat with event updates delivered seamlessly to both your email and
+                device.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="aboutus">
+    <div class="container">
+      <div class="row">
+        <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+          <div class="inner-column">
+            <div class="sec-title">
+              <span class="title" style="font-size: 30px;">About Calendrify</span>
+              <h2>Enables seamless scheduling, notifications, and team collaboration for efficient time management.</h2>
+            </div>
+            <div class="text">Effortlessly schedule and manage your meetings and events with our intuitive Calendrify.
+              Stay organized, receive notifications, and collaborate seamlessly with your Group.</div>
+
+            <div class="text">Our calendar app allows you to effectively manage your schedule by providing a
+              user-friendly interface for adding and organizing meetings. Once you log in, you can easily schedule and
+              track your upcoming meetings, ensuring you stay on top of your commitments.</div>
+
+            <div class="text">Additionally, our app offers a notification system that sends reminders for your scheduled
+              meetings, ensuring you never miss an important event. These notifications can be customized based on your
+              preferences, helping you stay organized and punctual.</div>
+
+          </div>
+        </div>
+
+        <div class="image-column col-lg-6 col-md-12 col-sm-12">
+          <img src="../assets/cal1.png" class="cal7">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-white pt-5 pb-4" style="background-color: #f6f8f9">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/assets/logo.png " alt="" class="d-flex justify-content-center" style="height: 100px;width: 100px;">
+          <h5 style="color:var(--appbg)">Calendrify</h5>
+        </div>
+        <div class="col-md-3">
+          <h5 style="color:var(--appbg)">Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="login">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 style="color:var(--appbg)">Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <hr class="text-primary" />
+      <div class="row">
+        <div class="col-md-6">
+          <p style="color:var(--appbg)">&copy; 2023 Calandrify. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</ng-container>
+<ng-template #elseTemplate>
+  <app-sidenav></app-sidenav>
+</ng-template>

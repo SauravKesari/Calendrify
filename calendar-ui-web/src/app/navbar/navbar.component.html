@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-default navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="/assets/logo.png" alt="" class="logo" /> Calendrify
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="nav-buttons ms-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" (click)="scrollTo('aboutus')">About us</a>
+          </li>
+          <li class="nav-item mr-5">
+            <a class="nav-link" (click)="scrollTo('features')">Features</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary" (click)="navigateTo('login')">
+              Login
+            </button>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</nav>

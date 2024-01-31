@@ -1,0 +1,117 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-10">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+    <div class="col-2 bg-light">
+      <a href="event-add" class="btn btn-primary my-4"><i class="fa fa-plus mx-2"></i>New Meeting</a>
+      <div class="eventlist">
+        <hr class="border-bottom border-primary" />
+        <h4 class="text-center font-weight-bold">My Events</h4>
+        <hr class="border-bottom border-primary" />
+        <p class="mx-3 font-weight-bold" style="color: var(--appbg);">Categories</p>
+        <ng-container *ngIf="eventCategoryList.length > 0; else elseTemplate">
+          <div class="categoryList">
+            <ul *ngFor="let eventCat of eventCategoryList">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input categoryTypes" type="checkbox" name="categoryTypes"
+                    [(ngModel)]="eventCat.checked" (change)="onCheckBoxValueChange($event, eventCat['name'])"
+                    value="{{eventCat['name']}}">
+                  <label class="form-check-label">
+                    {{eventCat['name']}}
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <li class=" my-2 text-center">No Category</li>
+        </ng-template>
+      </div>
+      <div class="todayEvents">
+        <hr class="border-bottom border-primary" />
+        <h5 class="text-center font-weight-bold">Today's Events</h5>
+        <hr class="border-bottom border-primary" />
+        <ng-container *ngIf="todayEventsList.length > 0; else elseEventTemplate">
+          <div class="todayList">
+            <ul *ngFor="let event of todayEventsList">
+              <li>
+                <div class="list d-flex justify-content-between">
+                  <h6>{{event.title}}</h6>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </ng-container>
+        <ng-template #elseEventTemplate>
+          <li class=" my-2 text-center">No Today's Event</li>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="showeventModal" tabindex="-1" aria-labelledby="showeventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Event Detail</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true" class="text-white" style="font-size: 2.4rem;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="event-details">
+            <div class="event-date">
+              <time class="icon">
+                <em>{{ displayEvent?.startDateTime | date: 'EEEE' }}</em>
+                <strong>{{ displayEvent?.startDateTime | date: 'MMMM' }}</strong>
+                <span>{{ displayEvent?.startDateTime | date: 'd' }}</span>
+              </time>
+            </div>
+            <div class="event-info">
+              <h3 class="event-title">{{ displayEvent?.title }}</h3>
+              <p class="event-host">By {{ displayEvent?.hostID?.firstName + " " + displayEvent?.hostID?.lastName }}</p>
+            </div>
+            <div class="edit-icon-container">
+              <i class="material-icons mr-2" style="font-size: 30px;" (click)="editEvent(displayEvent?.id)"
+                *ngIf="isEventEditable(displayEvent?.hostID!.id!)">edit</i>
+            </div>
+          </div>
+          <div class="card event-card shadow mt-4">
+            <div class="card-body">
+              <p class="card-text d-flex align-items-center">
+                <i class="material-icons mr-2 rounded-circle text-white"
+                  style="background-color: var(--modal-background); height: 30px; width: 30px; display: flex; justify-content: center; align-items: center;">description</i>
+                {{ displayEvent?.description }}
+              </p>
+              <p class="card-text d-flex align-items-center">
+                <i class="material-icons mr-2 rounded-circle text-white"
+                  style="background-color: var(--modal-background); height: 30px; width: 30px; display: flex; justify-content: center; align-items: center;">link</i><a
+                  href="">{{ displayEvent?.url}}</a>
+              </p>
+              <p class="card-text event-time d-flex">
+                <i class="material-icons mr-2 rounded-circle text-white"
+                  style="background-color: var(--modal-background); height: 30px; width: 30px; display: flex; justify-content: center; align-items: center;">schedule</i>{{
+                displayEvent?.startDateTime | date: 'h:mm a' }} To {{ displayEvent?.endDateTime | date: 'h:mm a' }}
+              </p>
+              <p class="card-text d-flex align-items-center">
+                <i class="material-icons mr-2 rounded-circle text-white"
+                  style="background-color: var(--modal-background); height: 30px; width: 30px; display: flex; justify-content: center; align-items: center;">groups</i>{{displayEvent?.groupid?.name}}
+              </p>
+              <p class="card-text d-flex align-items-center">
+                <i class="material-icons mr-2 rounded-circle text-white"
+                  style="background-color: var(--modal-background); height: 30px; width: 30px; display: flex; justify-content: center; align-items: center;">location_on</i>
+                {{displayEvent?.venueName==null||displayEvent?.venueName==''
+                ? 'Online': this.displayEvent?.venueName}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

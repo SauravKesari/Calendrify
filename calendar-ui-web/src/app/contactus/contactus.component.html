@@ -1,0 +1,44 @@
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header"></div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span class="text-white">CONTACT</span>
+            <span class="text-white">HERE</span>
+            <img src="/assets/contact.png" alt="Event Image">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+              integrity="sha512-...your-integrity-hash..." />
+          </div>
+          <div class="app-contact my-5">CONTACT INFO: +62 81 314 928 595</div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              <input class="app-form-control" placeholder="Name" [(ngModel)]="name">
+            </div>
+            <div class="app-form-group">
+              <input class="app-form-control" placeholder="Email" [(ngModel)]="email">
+            </div>
+            <div class="app-form-group">
+              <input class="app-form-control" placeholder="Contact No." [(ngModel)]="contact">
+            </div>
+            <div class="app-form-group message">
+              <textarea class="app-form-control" placeholder="Message" rows="5" [(ngModel)]="message"></textarea>
+            </div>
+            <div class="app-form-group buttons">
+              <button class="btn btn-success" (click)="sendMail()">SEND</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-social-icons">
+        <a href="https://www.facebook.com/example" target="_blank"><i class="fab fa-facebook fa-2x text-white"></i></a>
+        <a href="https://www.twitter.com/example" target="_blank"><i class="fab fa-twitter fa-2x text-white"></i></a>
+        <a href="https://www.instagram.com/example" target="_blank"><i
+            class="fab fa-instagram fa-2x text-white"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

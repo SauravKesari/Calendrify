@@ -1,0 +1,17 @@
+<ngx-ui-loader></ngx-ui-loader>
+<ng-container *ngIf="isUserExist; else elseTemplate">
+  <router-outlet></router-outlet>
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="container-fluid main-bg">
+    <div class="row">
+      <div class="col-2 navbar-background" style="border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;  background-color: var(--appbg);">
+        <app-sidenav-bar [profileUrl]="profileUrl" [userName]="userName"></app-sidenav-bar>
+      </div>
+      <div class="col-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</ng-template>

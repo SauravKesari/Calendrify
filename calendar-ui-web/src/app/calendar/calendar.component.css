@@ -1,0 +1,149 @@
+.categoryList {
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.todayList {
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.categoryList .dot {
+  height: 15px;
+  width: 15px;
+  background-color: #ef0a71;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.modal-content {
+  border: 0;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.modal-header {
+  background-color: var(--modal-background);
+  padding: 1.5rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.event-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-info {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.event-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-time {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-host {
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+.event-description {
+  margin-bottom: 1rem;
+}
+
+.event-url a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.event-url a:hover {
+  text-decoration: underline;
+}
+
+time.icon {
+  font-size: 1em;
+  /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: white;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+}
+
+time.icon * {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong {
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: var(--modal-background);
+  border-bottom: 1px dashed var(--modal-background);
+  box-shadow: 0 2px 0 var(--modal-background);
+}
+
+time.icon em {
+  position: absolute;
+  bottom: 0.3em;
+  color: var(--modal-background);
+}
+
+time.icon span {
+  font-size: 2.8em;
+  letter-spacing: -0.05em;
+  padding-top: 0.8em;
+  color: var(--modal-background);
+}
+
+.event-card.shadow {
+  box-shadow: 0 2px 4px var(--modal-background);
+  /* Adjust the shadow values as needed */
+}
+
+.edit-icon-container {
+  position: absolute;
+  top: 7%;
+  right: 0;
+  margin: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+
+.main-bg {
+  background: linear-gradient(#ffffff, #E0F7FF);
+  background-size: cover;
+  background-position: center;
+}

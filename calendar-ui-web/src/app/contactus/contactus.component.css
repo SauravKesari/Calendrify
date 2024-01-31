@@ -1,0 +1,119 @@
+.container {
+  border-radius: var(--border-radius);
+}
+
+.button,
+input,
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 800px;
+  /* Adjust the width as desired */
+  margin: auto;
+  padding: 20px;
+  /* Adjust the padding as desired */
+}
+
+.screen {
+  position: relative;
+  background: var(--modal-background);
+  border-radius: 15px;
+  padding: 30px;
+  /* Adjust the padding as desired */
+  margin-bottom: 30px;
+  /* Adjust the margin as desired */
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 20px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 26px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  display: flex;
+  justify-content: flex-end;
+  /* Adjust the alignment as desired */
+  align-items: center;
+  margin-top: 30px;
+  /* Adjust the margin as desired */
+}
+
+.app-form-group.buttons button {
+  width: 100px;
+  margin-left: 10px;
+  /* Adjust the margin as desired */
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 14px;
+}
+
+.app-title img {
+  width: 330px;
+  height: 300px;
+}
+
+.app-social-icons a:not(:last-child) {
+  margin-right: 40px;
+}
+
+.app-social-icons {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
